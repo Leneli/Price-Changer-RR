@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<title>Price Changer</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- jQuery -->
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+	<!-- for IE -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h3>TABLE 1</h3>
+
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped table-hover" id="goingOut">
+						<tbody>
+							<tr>
+								<td>Going Out</td>
+								<td>Moscow</td>
+								<td>Elsewhere</td>
+								<td>Amount</td>
+							</tr>
+							<tr>
+								<td>Beer (500ml)</td>
+								<td id="beerM">&nbsp;</td>
+								<td id="beerE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Wine (per 0,7cl bottle)</td>
+								<td id="wineM">&nbsp;</td>
+								<td id="wineE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Soft drinks (per bottle)</td>
+								<td id="softM">&nbsp;</td>
+								<td id="softE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Short taxi journey</td>
+								<td id="taxiM">&nbsp;</td>
+								<td id="taxiE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Meal in a small cafe</td>
+								<td id="cafeM">&nbsp;</td>
+								<td id="cafeE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Meal in a restaraunt</td>
+								<td id="restM">&nbsp;</td>
+								<td id="restE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Fast food</td>
+								<td id="fastM">&nbsp;</td>
+								<td id="fastE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Tea and coffee (per cup)</td>
+								<td id="teaM">&nbsp;</td>
+								<td id="teaE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Metro ticket (single)</td>
+								<td id="metroM">&nbsp;</td>
+								<td id="metroE">N/A</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Gratuities</td>
+								<td id="gratM">10%</td>
+								<td id="gratE">10%</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td style="background:#CD071E;color:#fff">Total Price in:
+									<select class="currency-ddl" style="color:black">
+										<option value="RUB">RUB</option>
+										<option value="GBP">GBP</option>
+										<option value="EUR">EUR</option>
+										<option value="USD">USD</option>
+									</select>
+								</td>
+								<td class="moscow" style="font-weight: bold;">0</td>
+								<td class="else" style="font-weight: bold;">0</td>
+								<td>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+				<h3>TABLE 2</h3>
+
+				<div class="table-responsive">
+					<table class="table table-bordered table-striped table-hover" id="rail">
+						<tbody>
+							<tr>
+								<td>Rail Adventure</td>
+								<td>Moscow</td>
+								<td>Elsewhere</td>
+								<td>Amount</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td id="breadM">&nbsp;</td>
+								<td id="breadE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Chicken (per KG)</td>
+								<td id="chickenM">&nbsp;</td>
+								<td id="chickenE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Meat (per KG - Beef)</td>
+								<td id="meatM">&nbsp;</td>
+								<td id="meatE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Fruit (per KG - Apples and bannanas)</td>
+								<td id="fruitM">&nbsp;</td>
+								<td id="fruitE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>vegetables (per KG - seasonal)</td>
+								<td id="vegM">&nbsp;</td>
+								<td id="vegE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Vodka (70cl bottle)</td>
+								<td id="vodkaM">&nbsp;</td>
+								<td id="vodkaE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Bottled water (1.5l bottle)</td>
+								<td id="waterM">&nbsp;</td>
+								<td id="waterE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Chocolate</td>
+								<td id="chocM">&nbsp;</td>
+								<td id="chocE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Pre-packed sandwich</td>
+								<td id="sandM">&nbsp;</td>
+								<td id="sandE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Coffee (per cup)</td>
+								<td id="coffeeM">&nbsp;</td>
+								<td id="coffeeE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Meal on-board (breakfast)</td>
+								<td id="breakM">&nbsp;</td>
+								<td id="breakE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Meal on-board (lunch)</td>
+								<td id="lunchM">&nbsp;</td>
+								<td id="lunchE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Meal on-board (dinner)</td>
+								<td id="dinnerM">&nbsp;</td>
+								<td id="dinnerE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Wet wipes, soap and other hygiene products</td>
+								<td id="wetM">&nbsp;</td>
+								<td id="wetE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Toilet paper</td>
+								<td id="paperM">&nbsp;</td>
+								<td id="paperE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Porters</td>
+								<td id="portersM">&nbsp;</td>
+								<td id="portersE">&nbsp;</td>
+								<td>
+									<select class="amount">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:#CD071E;color:#fff">Total Price in:
+									<select class="currency-ddl" style="color:black">
+										<option value="RUB">RUB</option>
+										<option value="GBP">GBP</option>
+										<option value="EUR">EUR</option>
+										<option value="USD">USD</option>
+									</select>
+								</td>
+								<td class="moscow" style="font-weight: bold;">0</td>
+								<td class="else" style="font-weight: bold;">0</td>
+								<td>&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="price-changer.js"></script>
+</body>
+
+</html>
